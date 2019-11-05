@@ -25,7 +25,7 @@ connection.once('open', () => {
   console.log('MongoDb running successfully')
 });
 
-const port = 1234;
+const port = process.env.PORT || 1234;
 
 app.use('/lessons', lessonRoutes)
 app.use('/retreats', retreatRoutes)
